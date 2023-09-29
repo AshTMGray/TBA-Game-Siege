@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <p id="textarea" 
+        class="hidden bg-gray-800 border-2 border-gray-700 text-white rounded-lg px-4 py-2 m-2 w-1/2 inline-block">
+    </p>
+    <input id="usertext" 
+        class="bg-gray-800 border-2 border-gray-700 text-white rounded-lg px-4 py-2 m-2 w-1/2 hidden"
+    />
+    <button onclick="startGame()" id="startGameBtn"
+        class="border-2 border-gray-700 px-4 py-2 rounded-lg bg-gray-800 text-white ml-2"
+    >
+        Start Game
+    </button>
+    <div class="flex flex-col" 
+        id="userInputArea"
+    >
+        <input 
+            id="usersName"
+            class="bg-gray-800 border-2 border-gray-700 text-white rounded-lg px-4 py-2 m-2 w-1/2"
+            onchange="setName(this.value)"
+            />
+       <div class="flex flex-row justify-between w-96">
+        <button onclick="setUserWeapon('Pistol')"
+        class="border-2 border-gray-700 px-4 py-2 rounded-lg bg-gray-800 text-white ml-2"
+        >
+            Pistol
+        </button>
+        <button onclick="setUserWeapon('AK47')"
+        
+        class="border-2 border-gray-700 px-4 py-2 rounded-lg bg-gray-800 text-white ml-2"
+        >
+            AK47
+        </button>
+        <button onclick="setUserWeapon('Sniper')"
+        class="border-2 border-gray-700 px-4 py-2 rounded-lg bg-gray-800 text-white ml-2"
+
+        >
+            Sniper
+        </button>
+        <button onclick="setUserWeapon('Machete')"
+        class="border-2 border-gray-700 px-4 py-2 rounded-lg bg-gray-800 text-white ml-2"
+
+        >
+            Machete
+        </button>
+       </div>
+       <p class="text-white p-8 hidden"
+        id="selectedWeapon"
+        >
+        You have selected <span id="usersWeapon"></span>
+       </p>
+    </div>
+</body>
+</html>
